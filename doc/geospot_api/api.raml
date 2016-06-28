@@ -1,0 +1,56 @@
+#%RAML 1.0
+title: Gf dag
+version: v1
+baseUri: http://api.samplehost.com
+types:
+  TestType:
+    type: object
+    properties:
+      id: number
+      optional?: string
+      expanded:
+        type: object
+        properties:
+          count: number
+
+/helloWorld:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              {
+                "message" : "Hello World"
+              }
+
+/notification:
+    /around:
+        post:
+            description: Get all the POI and ADV around the point selected and his projection in space
+            queryParameters:
+                posx:
+                    type: number
+                    description: The Coord position of X
+                    required: true
+                posy:
+                    type: number
+                    description: The Coord position of Y
+                    required: true
+                dir:
+                    type: number
+                    description: The direction of movement in degrees
+                    required: false
+                pattern-move:
+                    type: number
+                    description: The type ID of movement
+                    required: true
+                speed:
+                    type: number
+                    description: The speed of the movement in m/s
+                    required: false
+            responses:
+                200:
+                    body:
+                        application/json:
+                          example: !include examples/around_es.json

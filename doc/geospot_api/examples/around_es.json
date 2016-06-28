@@ -1,0 +1,22 @@
+{
+    "data":[
+        {
+            "id":22,
+            "name":"Tdays",
+            "x":44.4988435,
+            "y":11.3569628,
+            "r":22.6,
+            "description":"Via rizzoli, via ugo bassi e via indipendenza chiuse",
+            "type":"POI"
+        },
+        {
+            "id":22,
+            "name":"Feltrinelli Zero Calcare",
+            "x":44.4988535,
+            "y":11.3569628,
+            "r":202.6,
+            "description":"Oggi da feltrinelli viene Zero Calcare, firma copie e conferenza",
+            "type":"ADV"
+        }
+    ]
+}
